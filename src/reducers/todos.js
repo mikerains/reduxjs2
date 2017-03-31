@@ -1,3 +1,6 @@
+
+import { addTodo } from '../actions'; 
+
 const todo = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -32,6 +35,9 @@ const todos = (state = [], action) => {
         todo(t, action)
       )
     default:
+    if (state.length==0) {
+        return [todo(state,addTodo('Spock')), todo(state,addTodo('Kirk'))];
+    }
       return state;
   }
 }
