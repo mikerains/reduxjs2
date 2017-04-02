@@ -1,4 +1,3 @@
-
 import { addTodo } from '../actions'; 
 
 const todo = (state = {}, action) => {
@@ -36,7 +35,7 @@ const todos = (state = [], action) => {
       )
     default:
     if (state.length==0) {
-        return [todo(state,addTodo('Spock')), todo(state,addTodo('Kirk'))];
+        return [todo(state,addTodo('Contact Mr. Spock')), todo(state,addTodo('Kirk'))];
     }
       return state;
   }
