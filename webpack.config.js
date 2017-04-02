@@ -30,7 +30,6 @@ module.exports = {
     //plugins: [new HtmlWebpackPlugin({template: './src/index.html'})]
     plugins: [
         new CleanWebpackPlugin(['dist', 'build'], {
-            root: '/projects/mike/reduxjs',
             verbose: true,
             dry: false,
             exclude: ['shared.js']
